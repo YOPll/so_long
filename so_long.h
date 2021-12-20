@@ -21,6 +21,8 @@
 #include <fcntl.h>
 #include <stdio.h>
 
+# define FILE_R "Please insert the file"
+
 typedef struct s_so_long
 {
     void    *mlx;
