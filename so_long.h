@@ -15,16 +15,31 @@
 # define SO_LONG_H
 
 #include "minilibx/mlx.h"
-#include "./Libft/libft.h"
+#include "./libft/libft.h"
 #include <errno.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdio.h>
 
-# define FILE_R "Please insert the file"
+
+
+typedef struct s_map
+{
+    char    **map;
+}   t_map;
+
+typedef struct s_player
+{
+    int h;
+    int v;
+    t_map   map;
+}   t_player;
 
 typedef struct s_so_long
 {
+    t_map       map;
+    t_player    myplayer;
+
     void    *mlx;
     void    *window;
     void    *path;
