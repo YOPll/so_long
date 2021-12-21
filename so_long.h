@@ -47,6 +47,10 @@ typedef struct s_so_long
     void    *collect;
     void    *exitus;
 
+    int c_count;
+    int p_count;
+    int e_count;
+
     int     steps;
 
     int     img_width;
@@ -55,5 +59,8 @@ typedef struct s_so_long
     int     j;
 }       t_so_long;
 
+void    mapread(t_so_long *game, char *av[]);
+int     count_maplines(char *av[]);
+int     checkmap_l(t_so_long *game);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 01:59:44 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/21 02:38:19 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2021/12/21 18:57:12 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int count_maplines(char *av[])
     while (1)
     {
         str = get_next_line(fd);
-        if (!str)
-            break;
+        if (str == NULL)
+            break ;
         free (str);
         l_nbr++;
     }
@@ -40,12 +40,12 @@ void    mapread(t_so_long *game, char *av[])
     
     l_nbr = count_maplines(av);
     fd = open(av[1], O_RDONLY);
-    game->map.map = malloc(l_nbr * sizeof(char *));
+    game->map.map = (char **)malloc(l_nbr * sizeof(char *));
     l_nbr = 0;
     while (1)
     {
         str = get_next_line(fd);
-        if (!str)
+        if (str == NULL)
             break;
         game->map.map[l_nbr] = str;
         l_nbr++;
