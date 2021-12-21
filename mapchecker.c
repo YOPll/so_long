@@ -6,13 +6,13 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 17:20:09 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/21 20:26:17 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2021/12/21 20:37:20 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int     checkmap_l(t_so_long *game)
+int checkmapl(t_so_long *game)
 {
     int h;
     int w;
@@ -35,7 +35,7 @@ int     checkmap_l(t_so_long *game)
     }
     return (0);
 }
-int checkmap_l(t_so_long *game)
+int checkmap_lf(t_so_long *game)
 {
     int h;
     int w;
@@ -110,8 +110,9 @@ int check_PCE(t_so_long *game)
 
 void    checker(t_so_long *game)
 {
-    if ()
+    if (checkfullmap(game) == -1 || check_PCE(game) == -1 || checkmapl(game) == -1 || checkmap_lf(game) == -1)
     {
-        
+        printf();
+        exit(0);
     }
 }
