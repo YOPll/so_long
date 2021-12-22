@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 17:20:09 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/21 20:37:20 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2021/12/22 16:58:23 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,9 +110,10 @@ int check_PCE(t_so_long *game)
 
 void    checker(t_so_long *game)
 {
-    if (checkfullmap(game) == -1 || check_PCE(game) == -1 || checkmapl(game) == -1 || checkmap_lf(game) == -1)
+    if (checkfullmap(game) == -1 || check_PCE(game) == -1 || checkmapl(game) == -1 || checkmap_lf(game) == -1 || checksquare(game) == -1)
     {
-        printf();
-        exit(0);
+        perror("Error\n");
+        perror("something wrong with your map");
+        exit(1);
     }
 }

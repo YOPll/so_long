@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 01:59:44 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/21 18:57:12 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2021/12/22 16:57:20 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,19 @@ void    mapread(t_so_long *game, char *av[])
     close(fd);
     game->img_height = l_nbr;
     game->img_width = ft_strlen(game->map.map[0]);
+}
+int     checksquare(t_so_long *game)
+{
+    int i;
+    int w_len;
+    
+    i = 1;
+    w_len = ft_strlen(game->map.map[0]);
+    while (i < game->img_height)
+    {
+        if (ft_strlen(game->map.map[i]) != w_len)
+            return (-1);
+        i++;
+    }
+    return (0);
 }

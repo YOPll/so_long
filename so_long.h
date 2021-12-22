@@ -15,7 +15,7 @@
 # define SO_LONG_H
 
 #include "minilibx/mlx.h"
-#include "./libft/libft.h"
+#include "./utils/libft.h"
 #include <errno.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -53,6 +53,12 @@ typedef struct s_so_long
 
     int     steps;
 
+    char    *t_path;
+    char    *t_wall;
+    char    *t_ply;
+    char    *t_col;
+    char    *t_exit;
+
     int     img_width;
     int     img_height;
     int     i;
@@ -61,6 +67,12 @@ typedef struct s_so_long
 
 void    mapread(t_so_long *game, char *av[]);
 int     count_maplines(char *av[]);
-int     checkmap_l(t_so_long *game);
+void    ft_exit(char *msg);
+int     checkmapl(t_so_long *game);
+int     checkmap_lf(t_so_long *game);
+int     checkfullmap(t_so_long *game);
+int     check_PCE(t_so_long *game);
+void    checker(t_so_long *game);
+int     checksquare(t_so_long *game);
 
 #endif
