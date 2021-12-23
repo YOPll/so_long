@@ -40,9 +40,11 @@ typedef struct s_so_long
     t_map       map;
     t_player    myplayer;
 
-    void    *mlx;
-    void    *window;
+    void        *mlx;
+    void        *window;
+
     void    *path;
+    void    *wall;
     void    *player;
     void    *collect;
     void    *exitus;
