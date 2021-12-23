@@ -76,5 +76,6 @@ int     checkfullmap(t_so_long *game);
 int     check_PCE(t_so_long *game);
 void    checker(t_so_long *game);
 int     checksquare(t_so_long *game);
+void    ft_img(t_so_long *game);
 
 #endif

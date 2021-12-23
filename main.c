@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 17:12:21 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/23 21:07:38 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2021/12/23 21:19:53 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int main(int ac, char *av[])
     mapread(&game, av);
     game.mlx = mlx_init();
     game.window = mlx_new_window(game.mlx,(game.img_width * 30),(game.img_height * 30),"so_long");
-    
+    ft_img(&game);
+    mlx_loop(game.mlx);
     return (0);
 }
