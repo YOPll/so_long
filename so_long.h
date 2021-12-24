@@ -69,7 +69,7 @@ typedef struct s_so_long
 
 void    mapread(t_so_long *game, char *av[]);
 int     count_maplines(char *av[]);
-void    ft_exit(char *msg);
+int    ft_exit(void);
 int     checkmapl(t_so_long *game);
 int     checkmap_lf(t_so_long *game);
 int     checkfullmap(t_so_long *game);
@@ -77,5 +77,8 @@ int     check_PCE(t_so_long *game);
 void    checker(t_so_long *game);
 int     checksquare(t_so_long *game);
 void    ft_img(t_so_long *game);
+void    ft_map(t_so_long *game);
+void    ft_mapt(int i, int j, t_so_long *game);
+
 
 #endif
