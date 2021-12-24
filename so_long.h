@@ -78,7 +78,13 @@ void    checker(t_so_long *game);
 int     checksquare(t_so_long *game);
 void    ft_img(t_so_long *game);
 void    ft_map(t_so_long *game);
-void    ft_mapt(int i, int j, t_so_long *game);
+void    ft_mapt(t_so_long *game);
+void    ft_mapwall(int i, int j, t_so_long *game);
+void    ft_map_pla(int i, int j, t_so_long *game);
+void    ft_mapcoll(int i, int j, t_so_long *game);
+void    ft_mapexit(int i, int j, t_so_long *game);
+void    ft_map_path(int i, int j, t_so_long *game);
+int ft_move(int keycode, t_so_long *game);
 
 
 #endif

@@ -6,13 +6,13 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 17:30:52 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/24 18:20:29 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2021/12/24 19:10:02 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void    ft_mapt(int i, int j, t_so_long *game)
+void    ft_mapt(t_so_long *game)
 {
     int i;
     int j;
@@ -24,13 +24,13 @@ void    ft_mapt(int i, int j, t_so_long *game)
         while (j < game->img_width)
         {
             if (game->map.map[i][j] == '1')
-                ft_mapwall();
+                ft_mapwall(i, j, &game);
             else if(game->map.map[i][j] == 'P')
-                ft_map_pla();
+                ft_map_pla(i, j, &game);
             else if (game->map.map[i][j] == 'C')
-                ft_mapcoll();
+                ft_mapcoll(i, j, &game);
             else if (game->map.map[i][j] == 'E')
-                ft_mapexit();
+                ft_mapexit(i, j, &game);
             j++;
         }
         i++;
@@ -49,7 +49,7 @@ void    ft_map(t_so_long *game)
     {
         while (j < game->img_width)
         {
-            ft_mapt(i,j,&game);
+            ft_map_path(i, j, &game);
             j++;
         }
         i++;
