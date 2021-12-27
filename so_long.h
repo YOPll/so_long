@@ -86,5 +86,4 @@ void    ft_mapexit(int i, int j, t_so_long *game);
 void    ft_map_path(int i, int j, t_so_long *game);
 int ft_move(int keycode, t_so_long *game);
 
-
 #endif
