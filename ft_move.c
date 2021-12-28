@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/26 22:11:51 by yopi              #+#    #+#             */
-/*   Updated: 2021/12/28 16:48:26 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2021/12/28 18:02:34 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,36 +24,23 @@ void    ft_w(t_so_long *game)
         if (game->map.map[i - 1][j] == 'C')
             game->collect--;
         game->myplayer.v--;
+        ft_map_update(i, j, game);
+        ft_syncmap(i, j, game);
         game->steps++;
     }
     else if (game->map.map[i - 1][j] == 'E')
     {
         game->myplayer.v--;
+        ft_map_update(i, j, game);
+        ft_syncmap(i, j, game);
         ft_collcheck(game);
         game->steps++;
-        
     }
 }
 
 void    ft_s(t_so_long *game)
 {
-        int i;
-    int j;
-    
-    i = game->myplayer.v;
-    j = game->myplayer.h;
-    if (game->map.map[i][j - 1] == '0' || game->map.map[i][j - 1] == 'C')
-    {
-        if (game->map.map[i][j - 1] == 'C')
-            game->collect--;
-        game->myplayer.h--;
-        game->steps++;
-    }
-}
-
-void ft_a(t_so_long *game)
-{
-        int i;
+    int i;
     int j;
     
     i = game->myplayer.v;
@@ -63,6 +50,42 @@ void ft_a(t_so_long *game)
         if (game->map.map[i + 1][j] == 'C')
             game->collect--;
         game->myplayer.v++;
+        ft_map_update(i, j, game);
+        ft_syncmap(i, j, game);
+        game->steps++;
+    }
+    else if (game->map.map[i + 1][j] == 'E')
+    {
+        game->myplayer.v++;
+        ft_map_update(i, j, game);
+        ft_syncmap(i, j, game);
+        ft_collcheck(game);
+        game->steps++;
+    }
+}
+
+void ft_a(t_so_long *game)
+{
+    int i;
+    int j;
+    
+    i = game->myplayer.v;
+    j = game->myplayer.h;
+    if (game->map.map[i][j - 1] == '0' || game->map.map[i][j - 1] == 'C')
+    {
+        if (game->map.map[i][j - 1] == 'C')
+            game->collect--;
+        game->myplayer.h--;
+        ft_map_update(i, j, game);
+        ft_syncmap(i, j, game);
+        game->steps++;
+    }
+    else if (game->map.map[i][j - 1] == 'E')
+    {
+        game->myplayer.h--;
+        ft_map_update(i, j, game);
+        ft_syncmap(i, j, game);
+        ft_collcheck(game);
         game->steps++;
     }
 }
@@ -79,6 +102,16 @@ void    ft_d(t_so_long *game)
         if (game->map.map[i][j + 1] == 'C')
             game->collect--;
         game->myplayer.h++;
+        ft_map_update(i, j, game);
+        ft_syncmap(i, j, game);
+        game->steps++;
+    }
+    else if (game->map.map[i][j + 1] == 'E')
+    {
+        game->myplayer.h++;
+        ft_map_update(i, j, game);
+        ft_syncmap(i, j, game);
+        ft_collcheck(game);
         game->steps++;
     }
 }
