@@ -49,6 +49,9 @@ typedef struct s_so_long
     void    *collect;
     void    *exitus;
 
+    int coll_num;
+    int coll_sum;
+
     int c_count;
     int p_count;
     int e_count;
@@ -85,5 +88,8 @@ void    ft_mapcoll(int i, int j, t_so_long *game);
 void    ft_mapexit(int i, int j, t_so_long *game);
 void    ft_map_path(int i, int j, t_so_long *game);
 int ft_move(int keycode, t_so_long *game);
+void    ft_collcheck(t_so_long *game);
+void    ft_map_update(int x, int y, t_so_long *game);
+
 
 #endif
