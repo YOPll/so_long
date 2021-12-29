@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_mapfunc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 16:40:15 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/29 00:59:46 by yopi             ###   ########.fr       */
+/*   Updated: 2021/12/29 22:06:58 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 
 void    ft_mapwall(int i, int j, t_so_long *game)
 {
-    mlx_put_image_to_window(game->mlx, game->window, game->wall, i * 100, j * 100);
+    mlx_put_image_to_window(game->mlx, game->window, game->wall, j * 100, i * 100);
 }
 
 void    ft_map_pla(int i, int j, t_so_long *game)
 {
-    mlx_put_image_to_window(game->mlx,game->window,game->player, i * 100, j * 100);
+    mlx_put_image_to_window(game->mlx,game->window,game->player, j * 100, i * 100);
 }
 
 void    ft_mapcoll(int i, int j, t_so_long *game)
 {
-    mlx_put_image_to_window(game->mlx, game->window, game->collect, i * 100, j * 100);
+    mlx_put_image_to_window(game->mlx, game->window, game->collect, j * 100, i * 100);
 }
 
 void    ft_mapexit(int i, int j, t_so_long *game)
 {
-    mlx_put_image_to_window(game->mlx, game ->window, game->exitus, i * 100, j * 100);
+    mlx_put_image_to_window(game->mlx, game ->window, game->exitus, j * 100, i * 100);
 }
 
 void    ft_map_path(int i, int j, t_so_long *game)
 {
-    mlx_put_image_to_window(game->mlx, game->window, game->path, i * 100, j * 100);
+    mlx_put_image_to_window(game->mlx, game->window, game->path, j * 100, i * 100);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_readmap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 01:59:44 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/29 00:15:47 by yopi             ###   ########.fr       */
+/*   Updated: 2021/12/29 21:38:16 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,10 @@ int    mapread(t_so_long *game, char *av[])
     int     l_nbr;
     char    *str;
     
+
     l_nbr = count_maplines(av);
+    if (!l_nbr)
+        return l_nbr;
     fd = open(av[1], O_RDONLY);
     game->map.map = (char **)malloc(l_nbr * sizeof(char *));
     l_nbr = 0;
@@ -46,8 +49,7 @@ int    mapread(t_so_long *game, char *av[])
     {
         str = get_next_line(fd);
         if (str == NULL)
-            break;
-        // printf("%s - %zu\n", str, ft_strlen(str));
+            break ;
         game->map.map[l_nbr] = str;
         l_nbr++;
     }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 17:23:03 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/28 23:59:12 by yopi             ###   ########.fr       */
+/*   Updated: 2021/12/29 20:48:25 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ typedef struct s_so_long
 	void		*player;
 	void		*collect;
 	void		*exitus;
-	int			coll_num;
+	int			collected;
 	int			coll_sum;
 	int			c_count;
 	int			p_count;
@@ -79,6 +79,8 @@ void	ft_map_pla(int i, int j, t_so_long *game);
 void	ft_mapcoll(int i, int j, t_so_long *game);
 void	ft_mapexit(int i, int j, t_so_long *game);
 void	ft_map_path(int i, int j, t_so_long *game);
+void    ft_playerpos(int i, int j, t_so_long *game);
+void    ft_collpos(int  i, int  j, t_so_long *game);
 int		ft_move(int keycode, t_so_long *game);
 void	ft_collcheck(t_so_long *game);
 void	ft_map_update(int x, int y, t_so_long *game);
