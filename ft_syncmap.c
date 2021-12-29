@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_syncmap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 15:18:09 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/28 17:41:58 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2021/12/28 22:22:37 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void    ft_map_update(int x, int y, t_so_long *game)
     j = game->myplayer.h;
     if (game->map.map[x][y] == 'E' || game->map.map[x][y] == 'G')
     {
-        game->map.map[x][y] == 'E';
-        game->map.map[i][j] == 'P';
+        game->map.map[x][y] = 'E';
+        game->map.map[i][j] = 'P';
     }
     else
     {

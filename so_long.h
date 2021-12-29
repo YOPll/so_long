@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 17:23:03 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/28 18:30:11 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2021/12/28 23:59:12 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ typedef struct s_so_long
 	int			j;
 }	t_so_long;
 
-void	mapread(t_so_long *game, char *av[]);
+int	mapread(t_so_long *game, char *av[]);
 int		count_maplines(char *av[]);
 int		ft_exit(void);
 int		checkmapl(t_so_long *game);

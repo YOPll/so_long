@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 03:00:04 by yopi              #+#    #+#             */
-/*   Updated: 2021/12/19 19:23:36 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2021/12/29 00:27:10 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,11 @@ char	*ft_putline(char *keeper)
 		return (NULL);
 	if (ft_checker(keeper) == -42)
 		return (ft_strdup(keeper));
-	r_line = (char *)malloc(sizeof(char) * (size + 2));
+	r_line = (char *)malloc(sizeof(char) * (size + 1));
 	if (!r_line)
 		return (NULL);
 	ft_memmove(r_line, keeper, size);
-	r_line[size] = '\n';
-	r_line[size + 1] = '\0';
+	r_line[size] = '\0';
 	return (r_line);
 }
 

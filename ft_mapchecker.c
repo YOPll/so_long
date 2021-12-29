@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mapchecker.c                                       :+:      :+:    :+:   */
+/*   ft_mapchecker.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 17:20:09 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/24 16:35:11 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2021/12/29 00:44:58 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int checkmapl(t_so_long *game)
 {
     int h;
     int w;
-    
+
     h = 0;
     w = 0;
     while (h < game->img_height)
@@ -48,7 +48,7 @@ int checkmap_lf(t_so_long *game)
             return (-1);
         h++;
     }
-    h = game->img_height;
+    h = game->img_height - 1;
     w = 0;
     while (w < game->img_width)
     {
@@ -60,10 +60,10 @@ int checkmap_lf(t_so_long *game)
 }
 int checkfullmap(t_so_long *game)
 {
-    int     h;
-    int     w;
-    char    x;
-    
+    int h;
+    int w;
+    char x;
+
     h = 0;
     w = 0;
     while (h < game->img_height)
@@ -108,7 +108,7 @@ int check_PCE(t_so_long *game)
         return (0);
 }
 
-void    checker(t_so_long *game)
+void checker(t_so_long *game)
 {
     if (checkfullmap(game) == -1 || check_PCE(game) == -1 || checkmapl(game) == -1 || checkmap_lf(game) == -1 || checksquare(game) == -1)
     {

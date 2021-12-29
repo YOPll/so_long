@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_readmap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 01:59:44 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/22 16:57:20 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2021/12/29 00:15:47 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int count_maplines(char *av[])
+int count_maplines(char **av)
 {
     int     fd;
     int     l_nbr;
@@ -28,11 +28,11 @@ int count_maplines(char *av[])
         free (str);
         l_nbr++;
     }
-    close (fd);
+    close(fd);
     return (l_nbr);
 }
 
-void    mapread(t_so_long *game, char *av[])
+int    mapread(t_so_long *game, char *av[])
 {
     int     fd;
     int     l_nbr;
@@ -47,17 +47,19 @@ void    mapread(t_so_long *game, char *av[])
         str = get_next_line(fd);
         if (str == NULL)
             break;
+        // printf("%s - %zu\n", str, ft_strlen(str));
         game->map.map[l_nbr] = str;
         l_nbr++;
     }
     close(fd);
     game->img_height = l_nbr;
     game->img_width = ft_strlen(game->map.map[0]);
+    return(l_nbr);
 }
 int     checksquare(t_so_long *game)
 {
     int i;
-    int w_len;
+    size_t w_len;
     
     i = 1;
     w_len = ft_strlen(game->map.map[0]);
