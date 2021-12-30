@@ -6,13 +6,13 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 15:18:09 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/30 18:15:42 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2021/12/30 21:04:53 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void    ft_map_update(int x, int y, t_so_long *game)
+int    ft_map_update(int x, int y, t_so_long *game)
 {
     int i;
     int j;
@@ -32,6 +32,7 @@ void    ft_map_update(int x, int y, t_so_long *game)
         else
             game->map.map[i][j] = 'P';
     }
+    return 0;
 }
 void    ft_syncmap(int x, int y, t_so_long *game)
 {
