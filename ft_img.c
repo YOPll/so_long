@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 17:47:42 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/29 20:48:33 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2021/12/30 16:31:46 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void    ft_img(t_so_long *game)
 }
 void    ft_playerpos(int i, int j, t_so_long *game)
 {
-    game->myplayer.h = i;
-    game->myplayer.v = j;
+    game->myplayer.v = i;
+    game->myplayer.h = j;
     ft_map_pla(i, j, game);
 }
 
