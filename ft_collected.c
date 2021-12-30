@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 15:45:15 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/28 18:21:44 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2021/12/30 16:22:22 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_collcheck(t_so_long *game)
 {
-	if (game->collect == 0)
+	if (game->collected == 0)
 		ft_exit();
 }
