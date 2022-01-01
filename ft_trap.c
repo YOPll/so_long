@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 16:41:33 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 17:33:24 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/01 21:40:21 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	ft_trapcheck(t_so_long *game)
     j = game->myplayer.h;
 	if (game->map.map[i][j] == 'T')
 		ft_exit();
-	// todo u lost window here 
 }
 void    ft_checkopen(t_so_long *game)
 {

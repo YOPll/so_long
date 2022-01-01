@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 16:40:15 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 17:41:09 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/01 21:27:48 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void    ft_mapwall(int i, int j, t_so_long *game)
 void    ft_map_pla(int i, int j, t_so_long *game)
 {
     mlx_put_image_to_window(game->mlx,game->window,game->player, j * 100, i * 100);
+    
 }
 
 void    ft_mapcoll(int i, int j, t_so_long *game)
