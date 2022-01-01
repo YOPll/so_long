@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 17:23:03 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 19:13:43 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/01 20:48:54 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ typedef struct s_so_long
 	int			steps;
 	char		*t_path;
 	char		*t_wall;
-	char		*t_ply;
 	char		*t_col;
 	char		*t_exit;
 	char		*t_steps;
