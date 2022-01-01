@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 17:23:03 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/30 21:14:40 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/01 02:59:35 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ typedef struct s_so_long
 	void		*exitus;
 	void		*stepsus;
 	void		*collecus;
+	void		*trap;
 	int			collected;
 	int			coll_sum;
 	int			c_count;
@@ -59,11 +60,13 @@ typedef struct s_so_long
 	char		*t_exit;
 	char		*t_steps;
 	char		*t_collect;
+	char		*t_trap;
 
 	int			img_width;
 	int			img_height;
 	int			i;
 	int			j;
+	int			z;
 }	t_so_long;
 
 int	mapread(t_so_long *game, char *av[]);
