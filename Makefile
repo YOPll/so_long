@@ -8,8 +8,7 @@ FLAGS = -Wall -Wextra -Werror
 MLX = -Lminilibx -lmlx -framework OpenGL -framework AppKit
 
 SRC = main.c ft_img.c ft_readmap.c ft_move.c ft_mapfunc.c \
-	ft_exit.c ft_collected.c ft_map.c ft_mapchecker.c ft_syncmap.c \
-	ft_stringput.c
+	ft_exit.c ft_collected.c ft_map.c ft_mapchecker.c ft_syncmap.c 
 
 LIBFT_PATH = ./utils
 

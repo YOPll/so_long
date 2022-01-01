@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_img.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 17:47:42 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/30 21:28:21 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/01 16:15:55 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void    ft_img(t_so_long *game)
+void ft_img(t_so_long *game)
 {
     game->t_path = "./assets/Path.xpm";
     game->path = mlx_xpm_file_to_image(game->mlx, game->t_path, &game->i, &game->j);
@@ -28,15 +28,17 @@ void    ft_img(t_so_long *game)
     game->stepsus = mlx_xpm_file_to_image(game->mlx, game->t_steps, &game->i, &game->j);
     game->t_collect = "./assets/collected1.xpm";
     game->collecus = mlx_xpm_file_to_image(game->mlx, game->t_collect, &game->i, &game->j);
+    game->t_trap = "./assets/Spike.xpm";
+    game->trap = mlx_xpm_file_to_image(game->mlx, game->t_trap, &game->i, &game->j);
 }
-void    ft_playerpos(int i, int j, t_so_long *game)
+void ft_playerpos(int i, int j, t_so_long *game)
 {
     game->myplayer.v = i;
     game->myplayer.h = j;
     ft_map_pla(i, j, game);
 }
 
-void    ft_collpos(int  i, int  j, t_so_long *game)
+void ft_collpos(int i, int j, t_so_long *game)
 {
     game->coll_sum++;
     game->collected++;

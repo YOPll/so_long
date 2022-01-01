@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_mapfunc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 16:40:15 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/30 21:51:43 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/01 03:14:30 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,9 @@ void    ft_mapexit(int i, int j, t_so_long *game)
 void    ft_map_path(int i, int j, t_so_long *game)
 {
     mlx_put_image_to_window(game->mlx, game->window, game->path, j * 100, i * 100);
+}
+
+void    ft_map_trap(int i, int j, t_so_long *game)
+{
+    mlx_put_image_to_window(game->mlx, game->window, game->trap, j * 100, i * 100);
 }

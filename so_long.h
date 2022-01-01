@@ -6,7 +6,7 @@
 /*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 17:23:03 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 02:59:35 by yopi             ###   ########.fr       */
+/*   Updated: 2022/01/01 03:14:48 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,6 @@ void	ft_collcheck(t_so_long *game);
 int		ft_map_update(int x, int y, t_so_long *game);
 void	ft_syncmap(int x, int y, t_so_long *game);
 void    ft_count(t_so_long *game);
+void    ft_map_trap(int i, int j, t_so_long *game);
 
 #endif
