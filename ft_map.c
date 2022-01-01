@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 17:30:52 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 16:38:43 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/01 19:15:24 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int    ft_mapt(t_so_long *game)
             else if (game->map.map[i][j] == 'E')
                 ft_mapexit(i, j, game);
             else if (game->map.map[i][j] == 'T')
-                ft_map_trap(i,j,game);
+                ft_enemypos(i,j,game);
             j++;
         }
         i++;

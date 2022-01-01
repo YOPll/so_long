@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 15:45:15 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 17:15:52 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/01 19:23:29 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 void	ft_collcheck(t_so_long *game)
 {
 	if (game->collected == 0)
+	{
+		printf(" _   _    __        __   ___    _   _ \n");
+		printf("| | | |   \\ \\      / /  / _ \\  | \\ | |\n");
+		printf("| | | |    \\ \\ /\\ / /  | | | | |  \\| |\n");
+		printf("| |_| |     \\ V  V /   | |_| | | |\\  |\n");
+		printf(" \\___/       \\_/\\_/     \\___/  |_| \\_|\n");
 		ft_exit();
-	// todo u lost window here 
+	}
+
 }

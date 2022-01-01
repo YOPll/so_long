@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 17:23:03 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 18:09:43 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/01 19:13:43 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,20 @@ typedef struct s_player
 {
 	int		h;
 	int		v;
-	t_map	map;
 }	t_player;
+
+typedef struct s_enemy
+{
+	int		h;
+	int		v;
+}	t_enemy;
 
 typedef struct s_so_long
 {
 	t_map		map;
 	t_player	myplayer;
+	t_enemy		enemy;
+
 
 	void		*mlx;
 	void		*window;
@@ -99,6 +106,8 @@ void    ft_map_trap(int i, int j, t_so_long *game);
 void	ft_trapcheck(t_so_long *game);
 void    ft_checkopen(t_so_long *game);
 void    ft_refresh(int i, int j, t_so_long *game);
+void    ft_enemypos(int i,int j, t_so_long *game);
+
 
 
 #endif

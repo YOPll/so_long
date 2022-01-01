@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 17:47:42 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 17:39:37 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/01 19:15:52 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,11 @@ void ft_collpos(int i, int j, t_so_long *game)
     game->coll_sum++;
     game->collected++;
     ft_mapcoll(i, j, game);
+}
+
+void    ft_enemypos(int i,int j, t_so_long *game)
+{
+    game->enemy.v = i;
+    game->enemy.h = j;
+    ft_map_trap(i,j,game);
 }
