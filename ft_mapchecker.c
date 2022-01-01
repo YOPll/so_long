@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_mapchecker.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 17:20:09 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 01:59:12 by yopi             ###   ########.fr       */
+/*   Updated: 2022/01/01 18:58:50 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ int check_PCE(t_so_long *game)
         h++;
         w = 0;
     }
-    if (game->p_count < 1 || game->e_count < 1 || game->c_count < 1)
+    if (game->p_count != 1 || game->e_count < 1 || game->c_count < 1)
         return (-1);
     else
         return (0);
