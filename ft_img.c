@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_img.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 17:47:42 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 16:15:55 by yopi             ###   ########.fr       */
+/*   Updated: 2022/01/01 17:39:37 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void ft_img(t_so_long *game)
     game->collecus = mlx_xpm_file_to_image(game->mlx, game->t_collect, &game->i, &game->j);
     game->t_trap = "./assets/Spike.xpm";
     game->trap = mlx_xpm_file_to_image(game->mlx, game->t_trap, &game->i, &game->j);
+    game->t_open = "./assets/exit1.xpm";
+    game->exitopen = mlx_xpm_file_to_image(game->mlx, game->t_open, &game->i, &game->j);
 }
 void ft_playerpos(int i, int j, t_so_long *game)
 {

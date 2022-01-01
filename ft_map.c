@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_map.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 17:30:52 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 16:16:16 by yopi             ###   ########.fr       */
+/*   Updated: 2022/01/01 16:38:43 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+void    ft_map_trap(int i, int j, t_so_long *game)
+{
+    mlx_put_image_to_window(game->mlx, game->window, game->trap, j * 100, i * 100);
+}
 
 int    ft_mapt(t_so_long *game)
 {

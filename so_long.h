@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 17:23:03 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 03:14:48 by yopi             ###   ########.fr       */
+/*   Updated: 2022/01/01 18:09:43 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ typedef struct s_so_long
 	void		*player;
 	void		*collect;
 	void		*exitus;
+	void		*exitopen;
 	void		*stepsus;
 	void		*collecus;
 	void		*trap;
@@ -61,6 +62,7 @@ typedef struct s_so_long
 	char		*t_steps;
 	char		*t_collect;
 	char		*t_trap;
+	char		*t_open;
 
 	int			img_width;
 	int			img_height;
@@ -69,7 +71,7 @@ typedef struct s_so_long
 	int			z;
 }	t_so_long;
 
-int	mapread(t_so_long *game, char *av[]);
+int		mapread(t_so_long *game, char *av[]);
 int		count_maplines(char *av[]);
 int		ft_exit(void);
 int		checkmapl(t_so_long *game);
@@ -94,5 +96,9 @@ int		ft_map_update(int x, int y, t_so_long *game);
 void	ft_syncmap(int x, int y, t_so_long *game);
 void    ft_count(t_so_long *game);
 void    ft_map_trap(int i, int j, t_so_long *game);
+void	ft_trapcheck(t_so_long *game);
+void    ft_checkopen(t_so_long *game);
+void    ft_refresh(int i, int j, t_so_long *game);
+
 
 #endif
