@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_mapchecker.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 17:20:09 by zyacoubi          #+#    #+#             */
-/*   Updated: 2021/12/29 18:18:09 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/01 01:59:12 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int checkfullmap(t_so_long *game)
         while (w < game->img_width)
         {
             x = game->map.map[h][w];
-            if (x != '0' && x != '1' && x != 'C' && x != 'P' && x != 'E')
+            if (x != '0' && x != '1' && x != 'C' && x != 'P' && x != 'E' && x != 'T')
                 return (-1);
             w++;
         }
