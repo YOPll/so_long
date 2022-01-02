@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/01 16:41:33 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/02 02:31:18 by yopi             ###   ########.fr       */
+/*   Created: 2022/01/02 02:47:37 by yopi              #+#    #+#             */
+/*   Updated: 2022/01/02 02:47:41 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void	ft_trapcheck(t_so_long *game)
         printf("  888oo88      o888ooooo88   88ooo88   o88oooo888     o888o    \n");
 		ft_exit();
     }
-	// todo u lost window here 
 }
 void    ft_checkopen(t_so_long *game)
 {

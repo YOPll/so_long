@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 17:47:42 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 21:15:24 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/01 21:28:07 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,9 @@ void ft_playerpos(int i, int j, t_so_long *game)
         x = 0;
     game->myplayer.v = i;
     game->myplayer.h = j;
-    game->player = mlx_xpm_file_to_image(game->mlx, (char *)player[x], &game->i, &game->j);
+    game->player = mlx_xpm_file_to_image(game->mlx, (char *)player[x++], &game->i, &game->j);
     ft_map_pla(i, j, game);
+    mlx_destroy_image(game->mlx,game->player);
 }
 
 void ft_collpos(int i, int j, t_so_long *game)
