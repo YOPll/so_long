@@ -12,12 +12,14 @@ SRC = main.c ft_img.c ft_readmap.c ft_move.c ft_mapfunc.c \
 	ft_trap.c ft_norm.c
 
 LIBFT_PATH = ./utils
+LIBX_PATH = ./minilibx
 
 MAKE = make
 
 all: $(NAME)
 
 $(NAME): *.c
+	$(MAKE) -C ./minilibx
 	$(MAKE) -C ./utils
 	cp ./utils/libft.a $(NAME)
 	$(CC) $(FLAGS) -c $(SRC)
@@ -28,6 +30,8 @@ clean:
 	rm -f *.o
 	rm -f *.out
 	$(MAKE) clean -C $(LIBFT_PATH)
+	$(MAKE) clean -C $(LIBX_PATH)
+	
 
 fclean: clean
 	rm -f $(NAME)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_mapchecker.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 17:20:09 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 18:58:50 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/02 01:49:25 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,7 @@ void checker(t_so_long *game)
 {
     if (checkfullmap(game) == -1 || check_PCE(game) == -1 || checkmapl(game) == -1 || checkmap_lf(game) == -1 || checksquare(game) == -1)
     {
-        perror("Error\nsomething wrong with your map");
+        printf("Error\nsomething wrong with your map");
         exit(1);
     }
 }

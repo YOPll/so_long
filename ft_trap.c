@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_trap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 16:41:33 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 17:33:24 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/02 02:31:18 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,14 @@ void	ft_trapcheck(t_so_long *game)
     i = game->myplayer.v;
     j = game->myplayer.h;
 	if (game->map.map[i][j] == 'T')
+    {
+        printf("ooooo  oooo    ooooo         ooooooo    oooooooo8  ooooooooooo \n");
+        printf(" 888    88      888        o888   888o 888         88  888  88 \n");
+        printf(" 888    88      888        888     888  888oooooo      888     \n");
+        printf(" 888    88      888      o 888o   o888         888     888     \n");
+        printf("  888oo88      o888ooooo88   88ooo88   o88oooo888     o888o    \n");
 		ft_exit();
+    }
 	// todo u lost window here 
 }
 void    ft_checkopen(t_so_long *game)
