@@ -6,7 +6,7 @@
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 17:23:03 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/01 20:48:54 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/03 19:52:51 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ typedef struct s_so_long
 	t_map		map;
 	t_player	myplayer;
 	t_enemy		enemy;
-
 
 	void		*mlx;
 	void		*window;
@@ -83,7 +82,7 @@ int		ft_exit(void);
 int		checkmapl(t_so_long *game);
 int		checkmap_lf(t_so_long *game);
 int		checkfullmap(t_so_long *game);
-int		check_PCE(t_so_long *game);
+int		check_pce(t_so_long *game);
 void	checker(t_so_long *game);
 int		checksquare(t_so_long *game);
 void	ft_img(t_so_long *game);
@@ -94,19 +93,17 @@ void	ft_map_pla(int i, int j, t_so_long *game);
 void	ft_mapcoll(int i, int j, t_so_long *game);
 void	ft_mapexit(int i, int j, t_so_long *game);
 void	ft_map_path(int i, int j, t_so_long *game);
-void    ft_playerpos(int i, int j, t_so_long *game);
-void    ft_collpos(int  i, int  j, t_so_long *game);
+void	ft_playerpos(int i, int j, t_so_long *game);
+void	ft_collpos(int i, int j, t_so_long *game);
 int		ft_move(int keycode, t_so_long *game);
 void	ft_collcheck(t_so_long *game);
 int		ft_map_update(int x, int y, t_so_long *game);
 void	ft_syncmap(int x, int y, t_so_long *game);
-void    ft_count(t_so_long *game);
-void    ft_map_trap(int i, int j, t_so_long *game);
+void	ft_count(t_so_long *game);
+void	ft_map_trap(int i, int j, t_so_long *game);
 void	ft_trapcheck(t_so_long *game);
-void    ft_checkopen(t_so_long *game);
-void    ft_refresh(int i, int j, t_so_long *game);
-void    ft_enemypos(int i,int j, t_so_long *game);
-
-
+void	ft_checkopen(t_so_long *game);
+void	ft_refresh(int i, int j, t_so_long *game);
+void	ft_enemypos(int i, int j, t_so_long *game);
 
 #endif
