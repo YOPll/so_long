@@ -24,7 +24,7 @@ $(NAME): *.c
 	cp ./utils/libft.a $(NAME)
 	$(CC) $(FLAGS) -c $(SRC)
 	ar rc $(NAME) *.o
-	$(CC) $(FLAGS) -L. -lft_so_long ./minilibx/libmlx.a $(MLX) *.o -lz -o so_long
+	$(CC) $(FLAGS) -L. -lft_so_long ./minilibx/libmlx.a $(MLX) -lz -o so_long
 
 clean:
 	rm -f *.o
