@@ -7,20 +7,34 @@ FLAGS = -Wall -Wextra -Werror
 
 MLX = -Lminilibx -lmlx -framework OpenGL -framework AppKit
 
-SRC = main.c ft_img.c ft_readmap.c ft_move.c ft_mapfunc.c \
-	ft_exit.c ft_collected.c ft_map.c ft_mapchecker.c ft_syncmap.c \
-	ft_trap.c ft_norm.c
+SRC = ./src/main.c\
+	./src/ft_img.c\
+	./src/ft_readmap.c\
+	./src/ft_move.c\
+	./src/ft_mapfunc.c\
+	./src/ft_exit.c\
+	./src/ft_collected.c\
+	./src/ft_map.c\
+	./src/ft_mapchecker.c\
+	./src/ft_syncmap.c\
+	./src/ft_norm.c
 
 LIBFT_PATH = ./utils
+
 LIBX_PATH = ./minilibx
+
+HEADER = ./src/so_long.h
 
 MAKE = make
 
 all: $(NAME)
 
-$(NAME): *.c
+$(NAME): $(SRC) $(HEADER)
+	echo "Compiling Mandatory...."
 	$(MAKE) -C ./minilibx
-	$(MAKE) -C ./utils
+	echo "Compiling Mandatory...."
+	$(MAKE) -C $(LIBFT_PATH)
+	echo "Compiling Mandatory...."
 	cp ./utils/libft.a $(NAME)
 	$(CC) $(FLAGS) -c $(SRC)
 	ar rc $(NAME) *.o
@@ -39,3 +53,4 @@ fclean: clean
 	$(MAKE) fclean -C $(LIBFT_PATH)
 
 re: fclean all
+.PHONY : all clean fclean re bonus
