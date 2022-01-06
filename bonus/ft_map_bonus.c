@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_map.c                                           :+:      :+:    :+:   */
+/*   ft_map_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 17:30:52 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/05 20:04:18 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/06 17:07:10 by zyacoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	ft_mapt(t_so_long *game)
 	int	j;
 
 	i = 0;
-	j = 0;
 	while (i < game->img_height)
 	{
+		j = 0;
 		while (j < game->img_width)
 		{
 			if (game->map.map[i][j] == '1')
@@ -37,7 +37,6 @@ int	ft_mapt(t_so_long *game)
 			j++;
 		}
 		i++;
-		j = 0;
 	}
 	return (game->z = 0, 0);
 }

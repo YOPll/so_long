@@ -7,42 +7,89 @@ FLAGS = -Wall -Wextra -Werror
 
 MLX = -Lminilibx -lmlx -framework OpenGL -framework AppKit
 
-SRC = ./src/main.c\
-	./src/ft_img.c\
-	./src/ft_readmap.c\
-	./src/ft_move.c\
-	./src/ft_mapfunc.c\
-	./src/ft_exit.c\
-	./src/ft_collected.c\
-	./src/ft_map.c\
-	./src/ft_mapchecker.c\
-	./src/ft_syncmap.c\
-	./src/ft_norm.c
+SRC_FILES = main.c\
+	ft_img.c\
+	ft_readmap.c\
+	ft_move.c\
+	ft_mapfunc.c\
+	ft_exit.c\
+	ft_collected.c\
+	ft_map.c\
+	ft_mapchecker.c\
+	ft_syncmap.c\
+	ft_norm.c
+
+SRCB_FILES = main_bonus.c\
+	ft_img_bonus.c\
+	ft_readmap_bonus.c\
+	ft_move_bonus.c\
+	ft_mapfunc_bonus.c\
+	ft_exit_bonus.c\
+	ft_collected_bonus.c\
+	ft_map_bonus.c\
+	ft_mapchecker_bonus.c\
+	ft_syncmap_bonus.c\
+	ft_norm_bonus.c\
+	ft_trap_bonus.c
+
+SRC = $(addprefix ./src/, $(SRC_FILES))
+SRCB = $(addprefix ./bonus/, $(SRCB_FILES))
+
+OBJS = $(SRC:.c=.o)
+OBJBS = $(SRCB:.c=.o)
 
 LIBFT_PATH = ./utils
 
 LIBX_PATH = ./minilibx
 
-HEADER = ./src/so_long.h
+HEADER_DIR = include/
+HEADER = include/so_long.h
+
+MLX_LIB = ./minilibx/libmlx.a
+FT_LIB = ./utils/libft.a
 
 MAKE = make
 
 all: $(NAME)
 
-$(NAME): $(SRC) $(HEADER)
-	echo "Compiling Mandatory...."
-	$(MAKE) -C ./minilibx
-	echo "Compiling Mandatory...."
-	$(MAKE) -C $(LIBFT_PATH)
-	echo "Compiling Mandatory...."
-	cp ./utils/libft.a $(NAME)
-	$(CC) $(FLAGS) -c $(SRC)
-	ar rc $(NAME) *.o
-	$(CC) $(FLAGS) -L. -lft_so_long ./minilibx/libmlx.a $(MLX) -lz -o so_long
+$(NAME): $(OBJS) $(MLX_LIB) $(FT_LIB)
+	ar rc $(NAME) $(OBJS)
+	$(CC) $(FLAGS) $(NAME) $(FT_LIB) $(MLX_LIB) $(MLX) -lz -o so_long
+# $(CC) $(FLAGS) -L. -lft_so_long ./minilibx/libmlx.a $(MLX) -lz -o so_long
+# @ echo "Compiling Mandatory...."
+# $(MAKE) -C ./minilibx
+# @ echo "Compiling Mandatory...."
+# $(MAKE) -C $(LIBFT_PATH)
+# @ echo "Compiling Mandatory...."
+# cp ./utils/libft.a $(NAME)
+# $(CC) $(FLAGS) -c $(SRC)
+# ar rc $(NAME) $(OBJS)
+# $(CC) $(FLAGS) -L. -lft_so_long ./minilibx/libmlx.a $(MLX) -lz -o so_long
+
+bonus: $(OBJBS) $(MLX_LIB) $(FT_LIB)
+	ar rc $(NAME) $(OBJBS)
+	$(CC) $(FLAGS) $(NAME) $(FT_LIB) $(MLX_LIB) $(MLX) -lz -o so_long
+# @ echo "Compiling Mandatory...."
+# $(MAKE) -C ./minilibx
+# @ echo "Compiling Mandatory...."
+# $(MAKE) -C $(LIBFT_PATH)
+# @ echo "Compiling Mandatory...."
+# @ cp ./utils/libft.a $(NAME)
+# $(CC) $(FLAGS) -c $(SRCB)
+# ar rc $(NAME) $(OBJBS)
+# $(CC) $(FLAGS) -L. -lft_so_long ./minilibx/libmlx.a $(MLX) -lz -o so_long
+
+%.o: %.c $(HEADER)
+	$(CC) $(FLAGS) -I$(HEADER_DIR) -c $< -o $@
+
+$(FT_LIB):
+	make -C $(LIBFT_PATH)
+
+$(MLX_LIB):
+	make -C $(LIBX_PATH)
 
 clean:
-	rm -f *.o
-	rm -f *.out
+	rm -f $(OBJS) $(OBJBS)
 	$(MAKE) clean -C $(LIBFT_PATH)
 	$(MAKE) clean -C $(LIBX_PATH)
 	
