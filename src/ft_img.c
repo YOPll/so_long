@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_img.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 17:47:42 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/05 20:25:49 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/06 22:03:30 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,9 @@ void	ft_img(t_so_long *game)
 
 void	ft_playerpos(int i, int j, t_so_long *game)
 {
-	char	*player = "./assets/1.xpm";
-	
+	char	*player;
+
+	player = "./assets/1.xpm";
 	game->myplayer.v = i;
 	game->myplayer.h = j;
 	game->player = mlx_xpm_file_to_image(game->mlx, player,

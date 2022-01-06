@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_img_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 17:47:42 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/06 17:08:08 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/06 22:09:13 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_img(t_so_long *game)
 {
-	int rand;
-	rand = arc4random_uniform(4);
 	game->t_path = "./assets/Path.xpm";
 	game->path = mlx_xpm_file_to_image(game->mlx, game->t_path,
 			&game->i, &game->j);
@@ -79,9 +77,9 @@ void	ft_collpos(int i, int j, t_so_long *game)
 
 void	ft_enemypos(int i, int j, t_so_long *game)
 {
-	static int x;
-	int rand;
-	
+	static int	x;
+	int			rand;
+
 	if (++x < 25)
 		return ;
 	x = 0;
@@ -91,15 +89,14 @@ void	ft_enemypos(int i, int j, t_so_long *game)
 	{
 		game->t_trap = "./assets/enemy2l.xpm";
 		game->trap = mlx_xpm_file_to_image(game->mlx, game->t_trap,
-			&game->i, &game->j);
+				&game->i, &game->j);
 		ft_map_trap(i, j, game);
 	}
 	else if (rand == 1)
 	{
-
 		game->t_trap = "./assets/enemy2.xpm";
 		game->trap = mlx_xpm_file_to_image(game->mlx, game->t_trap,
-			&game->i, &game->j);
+				&game->i, &game->j);
 		ft_map_trap(i, j, game);
 	}
 }

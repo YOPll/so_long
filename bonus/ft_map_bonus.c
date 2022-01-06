@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_map_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 17:30:52 by zyacoubi          #+#    #+#             */
-/*   Updated: 2022/01/06 17:07:10 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/06 22:06:25 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
 
 int	ft_mapt(t_so_long *game)
 {

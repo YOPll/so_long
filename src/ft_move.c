@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_move.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zyacoubi <zyacoubi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yopi <yopi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/26 22:11:51 by yopi              #+#    #+#             */
-/*   Updated: 2022/01/05 20:01:46 by zyacoubi         ###   ########.fr       */
+/*   Updated: 2022/01/06 22:04:25 by yopi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_w(t_so_long *game)
 			ft_checkopen(game);
 		ft_refresh(i, j, game);
 		game->steps++;
-		printf("%d\n",game->steps);
+		printf("%d\n", game->steps);
 	}
 	else if (game->map.map[i - 1][j] == 'E')
 	{
@@ -36,7 +36,7 @@ void	ft_w(t_so_long *game)
 		ft_refresh(i, j, game);
 		ft_collcheck(game);
 		game->steps++;
-		printf("%d\n",game->steps);
+		printf("%d\n", game->steps);
 	}
 }
 
@@ -56,7 +56,7 @@ void	ft_s(t_so_long *game)
 			ft_checkopen(game);
 		ft_refresh(i, j, game);
 		game->steps++;
-		printf("%d\n",game->steps);
+		printf("%d\n", game->steps);
 	}
 	else if (game->map.map[i + 1][j] == 'E')
 	{
@@ -64,7 +64,7 @@ void	ft_s(t_so_long *game)
 		ft_refresh(i, j, game);
 		ft_collcheck(game);
 		game->steps++;
-		printf("%d\n",game->steps);
+		printf("%d\n", game->steps);
 	}
 }
 
@@ -84,7 +84,7 @@ void	ft_a(t_so_long *game)
 			ft_checkopen(game);
 		ft_refresh(i, j, game);
 		game->steps++;
-		printf("%d\n",game->steps);
+		printf("%d\n", game->steps);
 	}
 	else if (game->map.map[i][j - 1] == 'E')
 	{
@@ -92,7 +92,7 @@ void	ft_a(t_so_long *game)
 		ft_refresh(i, j, game);
 		ft_collcheck(game);
 		game->steps++;
-		printf("%d\n",game->steps);
+		printf("%d\n", game->steps);
 	}
 }
 
@@ -112,7 +112,7 @@ void	ft_d(t_so_long *game)
 			ft_checkopen(game);
 		ft_refresh(i, j, game);
 		game->steps++;
-		printf("%d\n",game->steps);
+		printf("%d\n", game->steps);
 	}
 	else if (game->map.map[i][j + 1] == 'E')
 	{
@@ -120,7 +120,7 @@ void	ft_d(t_so_long *game)
 		ft_refresh(i, j, game);
 		ft_collcheck(game);
 		game->steps++;
-		printf("%d\n",game->steps);
+		printf("%d\n", game->steps);
 	}
 }
 
