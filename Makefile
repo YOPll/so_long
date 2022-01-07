@@ -55,29 +55,10 @@ all: $(NAME)
 $(NAME): $(OBJS) $(MLX_LIB) $(FT_LIB)
 	ar rc $(NAME) $(OBJS)
 	$(CC) $(FLAGS) $(NAME) $(FT_LIB) $(MLX_LIB) $(MLX) -lz -o so_long
-# $(CC) $(FLAGS) -L. -lft_so_long ./minilibx/libmlx.a $(MLX) -lz -o so_long
-# @ echo "Compiling Mandatory...."
-# $(MAKE) -C ./minilibx
-# @ echo "Compiling Mandatory...."
-# $(MAKE) -C $(LIBFT_PATH)
-# @ echo "Compiling Mandatory...."
-# cp ./utils/libft.a $(NAME)
-# $(CC) $(FLAGS) -c $(SRC)
-# ar rc $(NAME) $(OBJS)
-# $(CC) $(FLAGS) -L. -lft_so_long ./minilibx/libmlx.a $(MLX) -lz -o so_long
 
 bonus: $(OBJBS) $(MLX_LIB) $(FT_LIB)
 	ar rc $(NAME) $(OBJBS)
 	$(CC) $(FLAGS) $(NAME) $(FT_LIB) $(MLX_LIB) $(MLX) -lz -o so_long
-# @ echo "Compiling Mandatory...."
-# $(MAKE) -C ./minilibx
-# @ echo "Compiling Mandatory...."
-# $(MAKE) -C $(LIBFT_PATH)
-# @ echo "Compiling Mandatory...."
-# @ cp ./utils/libft.a $(NAME)
-# $(CC) $(FLAGS) -c $(SRCB)
-# ar rc $(NAME) $(OBJBS)
-# $(CC) $(FLAGS) -L. -lft_so_long ./minilibx/libmlx.a $(MLX) -lz -o so_long
 
 %.o: %.c $(HEADER)
 	$(CC) $(FLAGS) -I$(HEADER_DIR) -c $< -o $@
