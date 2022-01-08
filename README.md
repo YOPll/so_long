@@ -14,5 +14,11 @@ This project is about creating your very first game! using Mlx.
 
 [SUBJECT](Subject/en.subject.pdf)
 
+# How to play ?
+- You need to compile  source files with `make ` for mandatory part and `make bonus` for bonus part.
+- To launch the game, execute `./so_long` with a map as argument: \
+`./so_long maps/*.ber`
+U free to make your own map ;).
+
 # PREVIEW
 <img width="1094" alt="Screen Shot 2022-01-08 at 02 20 04" src="https://user-images.githubusercontent.com/49567393/148625990-d5d2a468-2525-488e-9d46-31433cb156c6.png">
