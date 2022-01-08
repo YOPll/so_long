@@ -13,3 +13,6 @@ So_long is an individual project at [1337](1337.ma) *#42network* that requires u
 This project is about creating your very first game! using Mlx.
 
 [SUBJECT](Subject/en.subject.pdf)
+
+# PREVIEW
+<img width="1094" alt="Screen Shot 2022-01-08 at 02 20 04" src="https://user-images.githubusercontent.com/49567393/148625990-d5d2a468-2525-488e-9d46-31433cb156c6.png">
