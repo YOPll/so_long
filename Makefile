@@ -1,5 +1,5 @@
 
-CC = gcc
+CC = cc
 
 NAME = libft_so_long.a
 
